@@ -878,6 +878,12 @@
             border: 1px solid rgba(34, 197, 94, 0.25);
         }
 
+        .badge-ongoing {
+            background: rgba(0, 229, 255, 0.08);
+            color: var(--cyan);
+            border: 1px solid var(--cyan-border);
+        }
+
         .badge-past {
             background: rgba(148, 163, 184, 0.1);
             color: var(--text-muted);
@@ -1168,23 +1174,23 @@
                     </h1>
 
                     <p class="hero-desc">
-                        Hi, saya <strong style="color:var(--text-primary)">Akhmad Fauzi</strong> —
-                        <span style="color:var(--cyan);font-family:var(--font-mono);font-size:0.9em;">Full-Stack
-                            Engineer</span>
-                        dengan fokus mendalam di <strong style="color:var(--text-primary)">Backend Development</strong>.
-                        Saya merancang arsitektur API yang presisi, mengelola infrastruktur server Linux,
-                        dan menerjemahkan alur bisnis yang kompleks menjadi sistem yang bekerja optimal —
-                        menggunakan ekosistem <strong style="color:var(--text-primary)">Laravel</strong> &amp;
-                        <strong style="color:var(--text-primary)">NestJS</strong> sebagai senjata utama.
+                        Hi, saya <strong style="color:var(--text-primary)">Akhmad Fauzi</strong> — dikenal sebagai
+                        <span style="color:var(--cyan);font-family:var(--font-mono);font-size:0.9em;">Geats</span>.
+                        Seorang <strong style="color:var(--text-primary)">Backend Developer</strong> sekaligus
+                        <strong style="color:var(--text-primary)">QA Analyst</strong> yang membangun sistem terukur
+                        menggunakan <strong style="color:var(--text-primary)">Nest.js</strong> dan
+                        <strong style="color:var(--text-primary)">PHP (Laravel)</strong>, sekaligus memastikan
+                        keandalannya melalui pengujian API yang komprehensif, security assessment, dan automation testing.
+                        Dua sisi dari satu visi: sistem yang tidak hanya berjalan — tetapi <em style="color:var(--cyan)">terbukti benar</em>.
                     </p>
 
                     <!-- Role badges -->
                     <div class="hero-roles">
                         <span class="role-badge active">
-                            <span class="role-dot"></span> Backend Engineer
+                            <span class="role-dot"></span> Backend Developer
                         </span>
+                        <span class="role-badge">QA Analyst</span>
                         <span class="role-badge">System Analyst</span>
-                        <span class="role-badge">Quality Assurance</span>
                     </div>
 
                     <div class="hero-cta">
@@ -1350,9 +1356,18 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-number">PROJECT / 002</div>
-                    <h3 class="project-title">Board Vellox</h3>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:0.6rem;">
+                        <h3 class="project-title" style="margin-bottom:0;">Papanclip</h3>
+                        <a href="https://www.papanclip.hompimpa.biz.id/" target="_blank" rel="noopener"
+                            style="display:inline-flex;align-items:center;gap:0.35rem;font-family:var(--font-mono);font-size:0.68rem;color:var(--cyan);background:var(--cyan-dim);border:1px solid var(--cyan-border);border-radius:5px;padding:0.25rem 0.65rem;white-space:nowrap;transition:all var(--transition);"
+                            onmouseover="this.style.background='rgba(0,229,255,0.2)'"
+                            onmouseout="this.style.background='var(--cyan-dim)'">
+                            <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                        </a>
+                    </div>
                     <p class="project-desc">Enterprise project management platform berbasis Trello-clone dengan
-                        real-time sync, manajemen role yang granular, dan autentikasi OAuth 2.0.</p>
+                        real-time sync, manajemen role yang granular, dan autentikasi OAuth 2.0. Sudah live dan
+                        digunakan secara aktif.</p>
                     <ul class="project-features">
                         <li>Real-time Sync via WebSocket</li>
                         <li>Role-Based Access Control (RBAC)</li>
@@ -1403,20 +1418,58 @@
 
             <div class="timeline">
 
+                <!-- Papanclip — NEW -->
                 <div class="timeline-item">
                     <div class="timeline-node"></div>
                     <div class="timeline-meta">
-                        <span class="timeline-period">Juni 2025 — Sekarang</span>
+                        <span class="timeline-period">Mei 2026 — Sekarang</span>
+                        <span class="timeline-badge badge-current">Current</span>
+                    </div>
+                    <div class="timeline-role">Backend Developer</div>
+                    <div class="timeline-company">Papanclip <span style="color:var(--text-dim);font-size:0.8em;">(Part of Hompimpa Team)</span></div>
+                    <p class="timeline-desc">
+                        Merancang dan membangun infrastruktur backend inti platform, mulai dari desain skema database,
+                        implementasi REST API, hingga manajemen deployment ke environment production.
+                        Menerapkan lapisan keamanan yang kuat mencakup autentikasi, otorisasi berbasis role,
+                        dan proteksi terhadap celah keamanan umum pada aplikasi web.
+                    </p>
+                </div>
+
+                <!-- Altimeda — UPDATED -->
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-period">Mei 2025 — Sekarang</span>
                         <span class="timeline-badge badge-current">Current</span>
                     </div>
                     <div class="timeline-role">Quality Assurance</div>
                     <div class="timeline-company">Altimeda Cipta Visitama</div>
                     <p class="timeline-desc">
-                        Menjalankan proses quality assurance pada produk perangkat lunak perusahaan, memastikan standar
-                        kualitas terpenuhi sebelum setiap rilis.
+                        Merancang dan mengimplementasikan framework automation testing menggunakan
+                        <strong style="color:var(--text-primary)">OpenClaw</strong> dikombinasikan dengan agen
+                        <strong style="color:var(--text-primary)">ChatGPT-4o</strong> untuk mempercepat siklus pengujian.
+                        Bertanggung jawab atas pengujian fungsional, regresi, dan validasi sistem sebelum setiap rilis produksi.
                     </p>
                 </div>
 
+                <!-- Freelance — Ongoing -->
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-meta">
+                        <span class="timeline-period">Jan 2022 — Sekarang</span>
+                        <span class="timeline-badge badge-ongoing">Ongoing</span>
+                    </div>
+                    <div class="timeline-role">Independent Software Developer</div>
+                    <div class="timeline-company">Self-Employed <span style="color:var(--text-dim);font-size:0.8em;">(Freelance)</span></div>
+                    <p class="timeline-desc">
+                        Mengembangkan aplikasi web kustom end-to-end untuk klien dari berbagai industri menggunakan
+                        <strong style="color:var(--text-primary)">PHP (Laravel)</strong>.
+                        Menangani seluruh siklus proyek mulai dari requirement gathering, desain arsitektur,
+                        development, hingga deployment dan handover ke klien.
+                    </p>
+                </div>
+
+                <!-- Ismart QA — UPDATED -->
                 <div class="timeline-item">
                     <div class="timeline-node"></div>
                     <div class="timeline-meta">
@@ -1426,11 +1479,13 @@
                     <div class="timeline-role">Quality Assurance</div>
                     <div class="timeline-company">Ismart Inter Global</div>
                     <p class="timeline-desc">
-                        Merancang dan mengeksekusi test case secara manual, mencatat bug secara sistematis, serta
-                        berkolaborasi dengan tim developer untuk resolusi defect yang efisien.
+                        Melaksanakan pengujian manual, regresi, dan daily health checks pada aplikasi produksi.
+                        Merancang test case terstruktur, mencatat dan mengelola bug secara sistematis di issue tracker,
+                        serta berkolaborasi aktif dengan tim developer untuk memastikan resolusi defect yang efisien dan tepat waktu.
                     </p>
                 </div>
 
+                <!-- Ismart PHP Dev — UPDATED -->
                 <div class="timeline-item">
                     <div class="timeline-node"></div>
                     <div class="timeline-meta">
@@ -1440,12 +1495,14 @@
                     <div class="timeline-role">PHP Developer</div>
                     <div class="timeline-company">Ismart Inter Global</div>
                     <p class="timeline-desc">
-                        Mengembangkan dashboard BPJS internal perusahaan menggunakan PHP &amp; Laravel. Melakukan web
-                        security penetration testing untuk mengidentifikasi dan menutup celah keamanan pada aplikasi
-                        produksi.
+                        Mengembangkan dan memelihara dashboard BPJS internal perusahaan menggunakan PHP &amp; Laravel,
+                        mencakup integrasi data kepesertaan dan pelaporan dinamis.
+                        Menjalankan web security penetration testing secara berkala menggunakan Burp Suite untuk
+                        mengidentifikasi dan menutup celah keamanan pada aplikasi produksi.
                     </p>
                 </div>
 
+                <!-- KAI Internship -->
                 <div class="timeline-item">
                     <div class="timeline-node"></div>
                     <div class="timeline-meta">
@@ -1492,6 +1549,10 @@
                             <span class="contact-link-icon">$ github</span>
                             <span class="contact-link-value">github.com/onicyborg</span>
                         </a>
+                        <div class="contact-link" style="cursor: default;">
+                            <span class="contact-link-icon">$ location</span>
+                            <span class="contact-link-value">Depok, Jawa Barat</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1503,8 +1564,8 @@
     <footer>
         <p>
             Crafted with precision by <span>Akhmad Fauzi</span> &mdash;
-            <span style="color:var(--text-dim)">Full Stack Developer - Backend Focused</span>
-            &nbsp;·&nbsp; <span>2025</span>
+            <span style="color:var(--text-dim)">Backend Developer &amp; QA Analyst</span>
+            &nbsp;·&nbsp; <span>2026</span>
         </p>
     </footer>
 
