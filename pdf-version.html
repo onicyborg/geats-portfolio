@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akhmad Fauzi — Backend Developer & QA Analyst | Executive Summary</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: "#0F172A",
+          ink2: "#475569",
+          ink3: "#94A3B8",
+          accent: "#0E7490",
+          accentSoft: "#ECFEFF",
+          accentRed: "#B91C1C",
+          redSoft: "#FEF2F2",
+          line: "#E2E8F0",
+          paperSoft: "#F8FAFC",
+        },
+        fontFamily: {
+          sans: ["Plus Jakarta Sans", "sans-serif"],
+          mono: ["JetBrains Mono", "monospace"],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  /* Paksa browser tetap mencetak warna background (badge, chip, tombol CTA),
+     terlepas dari setting "Background graphics" di dialog print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
+    background: #e2e8f0;
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: #0F172A;
+  }
+
+  .sheet {
+    width: 210mm;
+    margin: 10mm auto;
+    background: #ffffff;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.18);
+    padding: 14mm 16mm;
+  }
+
+  .section-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @media print {
+    html, body {
+      background: #ffffff;
+    }
+    .no-print {
+      display: none !important;
+    }
+    .sheet {
+      width: auto;
+      margin: 0;
+      box-shadow: none;
+      padding: 14mm 16mm;
+    }
+  }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.06em;
+    color: #0E7490;
+    font-size: 10.5px;
+    text-transform: uppercase;
+  }
+
+  .chip {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    line-height: 1.4;
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid #E2E8F0;
+    color: #334155;
+    background: #F8FAFC;
+    white-space: nowrap;
+  }
+
+  .chip-accent {
+    border-color: rgba(14, 116, 144, 0.35);
+    color: #0E7490;
+    background: #ECFEFF;
+  }
+</style>
+</head>
+
+<body class="text-ink">
+
+  <!-- ===== Toolbar — tidak ikut tercetak ===== -->
+  <div class="no-print sticky top-0 z-50 flex items-center justify-center gap-3 bg-ink text-white py-2.5 text-sm">
+    <i class="bi bi-file-earmark-pdf"></i>
+    <span>Preview siap cetak A4 — gunakan <strong>Ctrl/Cmd + P</strong>, lalu pilih “Save as PDF”.</span>
+    <button onclick="window.print()" class="ml-2 inline-flex items-center gap-1.5 bg-accent hover:bg-cyan-800 text-white px-3 py-1 rounded-md text-xs font-semibold transition">
+      <i class="bi bi-printer"></i> Cetak / Simpan PDF
+    </button>
+  </div>
+
+  <!-- =======================================================
+       HALAMAN 1 — Profil, Skills, Experience
+  ======================================================== -->
+  <div class="sheet">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between">
+      <div>
+        <div class="eyebrow mb-1">// akhmad_fauzi</div>
+        <h1 class="text-[28px] font-extrabold tracking-tight leading-none text-ink">Akhmad Fauzi</h1>
+        <p class="text-[13px] font-semibold text-accent mt-1">
+          Software Engineer — Backend Development &amp; Quality Assurance
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip-accent chip">Backend Developer</span>
+          <span class="chip" style="border-color:rgba(185,28,28,0.3); color:#B91C1C; background:#FEF2F2;">QA Analyst</span>
+          <span class="chip">System Analyst</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-end gap-2">
+        <span class="inline-flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-1 rounded-full border border-green-200 bg-green-50 text-green-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Tersedia untuk peluang baru
+        </span>
+        <div class="w-14 h-14 rounded-lg border-2 border-ink overflow-hidden flex items-center justify-center">
+          <img src="ace.jpeg" alt="Akhmad Fauzi" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT ROW -->
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-1.5 mt-4 py-2.5 border-y border-line text-[11px] font-mono text-ink2">
+      <span class="inline-flex items-center gap-1.5"><i class="bi bi-envelope text-accent"></i> akhmadfauzy40@gmail.com</span>
+      <span class="inline-flex items-center gap-1.5"><i class="bi bi-linkedin text-accent"></i> linkedin.com/in/geats</span>
+      <span class="inline-flex items-center gap-1.5"><i class="bi bi-github text-accent"></i> github.com/onicyborg</span>
+      <span class="inline-flex items-center gap-1.5"><i class="bi bi-geo-alt text-accent"></i> Depok, Jawa Barat, Indonesia</span>
+    </div>
+
+    <!-- SUMMARY -->
+    <p class="text-[12.5px] text-ink2 leading-relaxed mt-4 max-w-[170mm]">
+      Software Engineer yang berfokus pada <strong class="text-ink">Backend Development</strong> dan
+      <strong class="text-ink">Quality Assurance</strong>. Membangun sistem backend yang scalable menggunakan
+      <strong class="text-ink">Nest.js</strong> dan <strong class="text-ink">PHP (Laravel)</strong>, sekaligus memastikan
+      keandalannya melalui pengujian API, security assessment, dan automation testing yang terstruktur — dua sisi dari satu
+      visi: sistem yang tidak hanya berjalan, tapi juga teruji benar.
+    </p>
+
+    <!-- SKILLS + EXPERIENCE -->
+    <div class="grid grid-cols-12 gap-8 mt-6">
+
+      <!-- LEFT: SKILLS -->
+      <div class="col-span-4">
+        <div class="eyebrow mb-2">// keahlian &amp; tools</div>
+
+        <div class="mb-3.5">
+          <div class="text-[10.5px] font-bold uppercase tracking-wide text-ink mb-1.5">Backend &amp; Architecture</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">TypeScript</span>
+            <span class="chip">Nest.js</span><span class="chip">Prisma ORM</span><span class="chip">Eloquent ORM</span>
+          </div>
+        </div>
+
+        <div class="mb-3.5">
+          <div class="text-[10.5px] font-bold uppercase tracking-wide text-ink mb-1.5">Database, API &amp; Security</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">DBeaver</span>
+            <span class="chip">Bruno</span><span class="chip">Swagger</span><span class="chip-accent chip">Burp Suite</span>
+          </div>
+        </div>
+
+        <div class="mb-3.5">
+          <div class="text-[10.5px] font-bold uppercase tracking-wide text-ink mb-1.5">Quality Assurance &amp; Automation</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip-accent chip">Manual Testing</span><span class="chip-accent chip">Regression Testing</span>
+            <span class="chip-accent chip">Test Case Design</span><span class="chip">OpenClaw + GPT‑4o Automation</span>
+            <span class="chip">Bug Tracking</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-[10.5px] font-bold uppercase tracking-wide text-ink mb-1.5">Tools &amp; Workflow</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip">Linux (Ubuntu/Kali)</span><span class="chip">Bash</span><span class="chip">GitHub CLI</span>
+            <span class="chip">Vercel</span><span class="chip">Flutter</span><span class="chip">AI-Assisted Dev</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: EXPERIENCE -->
+      <div class="col-span-8">
+        <div class="eyebrow mb-2">// pengalaman profesional</div>
+
+        <div class="space-y-3">
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-accent">Mei 2026 — Sekarang</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-green-50 text-green-700 border border-green-200">Current</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">Backend Developer <span class="text-ink2 font-medium">— Papanclip <span class="text-ink3">(Hompimpa Team)</span></span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Merancang &amp; membangun infrastruktur backend inti platform — skema database, REST API, hingga deployment produksi, lengkap dengan lapisan keamanan (auth, RBAC, proteksi vulnerability umum).
+            </p>
+          </div>
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-accent">Mei 2025 — Sekarang</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-green-50 text-green-700 border border-green-200">Current</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">Quality Assurance <span class="text-ink2 font-medium">— Altimeda Cipta Visitama</span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Merancang framework automation testing dengan OpenClaw dikombinasikan agen ChatGPT‑4o; bertanggung jawab atas functional &amp; regression testing serta validasi sistem sebelum rilis produksi.
+            </p>
+          </div>
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-accent">Jan 2022 — Sekarang</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-accentSoft text-accent border border-cyan-100">Ongoing</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">Independent Software Developer <span class="text-ink2 font-medium">— Self-Employed <span class="text-ink3">(Freelance)</span></span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Mengembangkan aplikasi web end-to-end dengan PHP (Laravel) dan aplikasi mobile dengan Flutter untuk klien lintas industri — dari requirement gathering hingga deployment &amp; handover.
+            </p>
+          </div>
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-ink3">Jan 2025 — Mei 2025</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-ink2 border border-line">Past</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">Quality Assurance <span class="text-ink2 font-medium">— Ismart Inter Global</span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Manual testing, regression, dan daily health check pada aplikasi produksi; merancang test case terstruktur dan mengelola bug di issue tracker bersama tim developer.
+            </p>
+          </div>
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-ink3">Mei 2023 — Des 2024</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-ink2 border border-line">Past</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">PHP Developer <span class="text-ink2 font-medium">— Ismart Inter Global</span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Mengembangkan &amp; memelihara dashboard BPJS internal dengan PHP &amp; Laravel; menjalankan penetration testing berkala dengan Burp Suite untuk menutup celah keamanan.
+            </p>
+          </div>
+
+          <div class="avoid-break border-l-2 border-line pl-3.5">
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="font-mono text-[10px] text-ink3">Agt 2022 — Mar 2023</span>
+              <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-ink2 border border-line">Internship</span>
+            </div>
+            <div class="text-[13px] font-bold text-ink leading-tight">Website Developer (Intern) <span class="text-ink2 font-medium">— KAI DAOP 5 Purwokerto</span></div>
+            <p class="text-[11px] text-ink2 leading-snug mt-0.5">
+              Merancang ERD &amp; skema database, mengembangkan backend sistem internal, serta pengujian fungsionalitas aplikasi web perusahaan.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       HALAMAN 2 — Proyek Unggulan & Kontak
+  ======================================================== -->
+  <div class="sheet section-break">
+
+    <div class="eyebrow mb-1">// karya pilihan</div>
+    <h2 class="text-[20px] font-extrabold text-ink tracking-tight">Proyek Unggulan</h2>
+    <p class="text-[11.5px] text-ink2 mt-1 mb-5 max-w-[170mm]">
+      Proyek yang mencerminkan kemampuan teknis dan pemahaman arsitektur sistem — mulai dari backend keuangan multi-tenant, platform manajemen proyek real-time, hingga sistem payroll otomatis.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4">
+
+      <!-- Project 1 -->
+      <div class="avoid-break border border-line rounded-lg p-3.5">
+        <div class="font-mono text-[9px] text-ink3 mb-1">PROJECT / 001</div>
+        <div class="text-[13px] font-bold text-ink mb-1">Finance Workspace API</div>
+        <p class="text-[10.5px] text-ink2 leading-snug mb-2">
+          Backend manajemen keuangan multi-workspace dengan isolasi data antar tenant yang ketat dan laporan PDF dinamis.
+        </p>
+        <ul class="text-[10px] text-ink2 leading-snug space-y-0.5 mb-2.5 list-disc pl-3.5">
+          <li>Isolasi data per workspace tenant</li>
+          <li>Atomic transactions untuk integritas data</li>
+          <li>Dokumentasi API via Swagger</li>
+        </ul>
+        <div class="flex flex-wrap gap-1">
+          <span class="chip">NestJS</span><span class="chip">PostgreSQL</span><span class="chip">Prisma</span><span class="chip">Swagger</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="avoid-break border border-line rounded-lg p-3.5">
+        <div class="flex items-center justify-between mb-1">
+          <div class="font-mono text-[9px] text-ink3">PROJECT / 002</div>
+          <a href="https://www.papanclip.hompimpa.biz.id/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-[9px] font-mono text-accent">
+            <i class="bi bi-box-arrow-up-right"></i> Live
+          </a>
+        </div>
+        <div class="text-[13px] font-bold text-ink mb-1">Papanclip</div>
+        <p class="text-[10.5px] text-ink2 leading-snug mb-2">
+          Platform manajemen proyek enterprise (Trello-clone) dengan real-time sync, role management granular, dan OAuth 2.0. Live &amp; digunakan aktif.
+        </p>
+        <ul class="text-[10px] text-ink2 leading-snug space-y-0.5 mb-2.5 list-disc pl-3.5">
+          <li>Real-time sync via WebSocket</li>
+          <li>Role-Based Access Control (RBAC)</li>
+          <li>Autentikasi OAuth 2.0</li>
+        </ul>
+        <div class="flex flex-wrap gap-1">
+          <span class="chip">NestJS</span><span class="chip">PostgreSQL</span><span class="chip">WebSocket</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="avoid-break border border-line rounded-lg p-3.5">
+        <div class="font-mono text-[9px] text-ink3 mb-1">PROJECT / 003</div>
+        <div class="text-[13px] font-bold text-ink mb-1">EasyKan</div>
+        <p class="text-[10.5px] text-ink2 leading-snug mb-2">
+          Sistem payroll otomatis yang mengintegrasikan generate PDF dan workflow pengiriman dokumen via Microsoft Graph API.
+        </p>
+        <ul class="text-[10px] text-ink2 leading-snug space-y-0.5 mb-2.5 list-disc pl-3.5">
+          <li>Otomasi generate slip gaji PDF</li>
+          <li>Workflow publish &amp; kirim email</li>
+          <li>Manajemen payroll multi-periode</li>
+        </ul>
+        <div class="flex flex-wrap gap-1">
+          <span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">MS Graph API</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HIGHLIGHT STRIP -->
+    <div class="avoid-break grid grid-cols-4 gap-3 mt-7 py-4 border-y border-line">
+      <div class="text-center">
+        <div class="text-[20px] font-extrabold text-accent">4+</div>
+        <div class="text-[9.5px] text-ink2 font-mono mt-0.5">Tahun Pengalaman</div>
+      </div>
+      <div class="text-center">
+        <div class="text-[20px] font-extrabold text-accent">3</div>
+        <div class="text-[9.5px] text-ink2 font-mono mt-0.5">Proyek Production</div>
+      </div>
+      <div class="text-center">
+        <div class="text-[20px] font-extrabold text-accent">2</div>
+        <div class="text-[9.5px] text-ink2 font-mono mt-0.5">Spesialisasi: Backend + QA</div>
+      </div>
+      <div class="text-center">
+        <div class="text-[20px] font-extrabold text-accent">6</div>
+        <div class="text-[9.5px] text-ink2 font-mono mt-0.5">Peran Profesional</div>
+      </div>
+    </div>
+
+    <!-- TERMINAL CTA -->
+    <div class="avoid-break mt-7 border border-line rounded-xl overflow-hidden">
+      <div class="flex items-center gap-1.5 px-4 py-2 bg-paperSoft border-b border-line">
+        <span class="w-2 h-2 rounded-full bg-red-400"></span>
+        <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+        <span class="w-2 h-2 rounded-full bg-green-400"></span>
+        <span class="ml-auto font-mono text-[9.5px] text-ink3">portfolio.sh</span>
+      </div>
+      <div class="px-5 py-4">
+        <p class="text-[11px] text-ink2 mb-2.5">
+          Dokumen ini adalah ringkasan eksekutif. Untuk pengalaman interaktif penuh — termasuk animasi, demo proyek, dan detail tambahan — kunjungi versi web aslinya.
+        </p>
+        <a href="https://geats-portfolio.vercel.app/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 font-mono text-[12px] font-semibold text-white bg-accent hover:bg-cyan-800 px-4 py-2 rounded-md transition">
+          <i class="bi bi-terminal"></i> $ open — Lihat versi web interaktif di sini
+        </a>
+        <div class="font-mono text-[10px] text-ink3 mt-1.5">geats-portfolio.vercel.app</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="mt-8 pt-3 border-t border-line flex items-center justify-between text-[9.5px] font-mono text-ink3">
+      <span>Akhmad Fauzi — Backend Developer &amp; QA Analyst</span>
+      <span>akhmadfauzy40@gmail.com · github.com/onicyborg</span>
+    </div>
+  </div>
+
+</body>
+</html>
