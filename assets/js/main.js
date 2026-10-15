@@ -20,8 +20,11 @@ $('#skills-notes').innerHTML = [
   ['skills.mobileTitle', 'skills.mobileDesc', ['Flutter', 'Dart'], ['tag.cross', 'tag.responsive', 'tag.codebase']],
 ].map(([title, description, tools, labels]) => `<article class="skill-note reveal"><span class="note-mark" aria-hidden="true">+</span>${copy(title, 'h3')}${copy(description, 'p')}${tools.length ? `<p class="tools">${tools.join(' <span aria-hidden="true">/</span> ')}</p>` : ''}<ul class="skill-tags">${tags(labels)}</ul></article>`).join('');
 $('#services-list').innerHTML = [
-  ['Laravel', 'PHP', 'MySQL', 'REST API'], ['Flutter', 'Dart', 'tag.cross'], ['tag.bugFix', 'tag.integration', 'tag.architecture'],
-].map((tools, i) => `<article class="service-row reveal"><span class="mono service-number" aria-hidden="true">${['A', 'B', 'C'][i]}</span>${copy(`svc${i + 1}.title`, 'h3')}<div>${copy(`svc${i + 1}.desc`, 'p')}<ul class="tech-list">${tools.map(tool => tool.startsWith('tag.') ? copy(tool, 'li') : `<li>${tool}</li>`).join('')}</ul></div></article>`).join('');
+  ['Laravel', 'PHP', 'Nest.js', 'Next.js', 'MySQL', 'PostgreSQL', 'REST API'],
+  ['Nest.js', 'Laravel', 'Go', 'MySQL', 'PostgreSQL', 'REST API'],
+  ['Flutter', 'Dart', 'tag.cross'],
+  ['tag.bugFix', 'tag.integration', 'tag.architecture'],
+].map((tools, i) => `<article class="service-row reveal"><span class="mono service-number" aria-hidden="true">${['A', 'B', 'C', 'D'][i]}</span>${copy(`svc${i + 1}.title`, 'h3')}<div>${copy(`svc${i + 1}.desc`, 'p')}<ul class="tech-list">${tools.map(tool => tool.startsWith('tag.') ? copy(tool, 'li') : `<li>${tool}</li>`).join('')}</ul></div></article>`).join('');
 $('#timeline').innerHTML = [
   ['Papanclip', 'role.backend', 'exp.current', 'exp.team'],
   ['Altimeda Cipta Visitama', 'role.quality', 'exp.current'],
