@@ -12,7 +12,7 @@ export const PROJECTS = [
     slug: 'finance-workspace-api', title: 'Finance Workspace API', number: '002',
     summary: 'proj1.desc', features: ['proj1.f1', 'proj1.f2', 'proj1.f3', 'proj1.f4'],
     tech: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Swagger'],
-    links: { live: 'https://finance-workspace-api.vercel.app/docs', repo: 'https://github.com/onicyborg/EasyKan.git' }, // TODO: add verified live and repository URLs.
+    links: { live: 'https://finance-workspace-api.vercel.app/docs', repo: 'https://github.com/onicyborg/finance-workspace-api.git' }, // TODO: add verified live and repository URLs.
     screenshots: ['assets/projects/finance-workspace-api/01.webp', 'assets/projects/finance-workspace-api/02.webp', 'assets/projects/finance-workspace-api/03.webp'],
     role: 'role.backend',
   },
