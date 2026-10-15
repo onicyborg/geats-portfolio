@@ -25,7 +25,7 @@ $('#services-list').innerHTML = [
 $('#timeline').innerHTML = [
   ['Papanclip', 'role.backend', 'exp.current', 'exp.team'],
   ['Altimeda Cipta Visitama', 'role.quality', 'exp.current'],
-  ['exp.freelance', 'role.independent', 'exp.ongoing'],
+  ['exp.freelance', 'role.independent', 'exp.current'],
   ['Ismart Inter Global', 'role.quality', 'exp.past'],
   ['Ismart Inter Global', 'role.php', 'exp.past'],
   ['KAI DAOP 5 Purwokerto', 'role.intern', 'exp.internship'],
@@ -86,9 +86,18 @@ function loadGallery(project) {
 }
 function renderProject() {
   const project = PROJECTS[activeProject];
+  const actions = [['live', 'projects.live'], ['repo', 'projects.repo']]
+    .filter(([key]) => project.links[key])
+    .map(([key, label]) => `<a class="button ${key === 'live' ? 'primary' : 'secondary'}" href="${escape(project.links[key])}" target="_blank" rel="noopener noreferrer">${escape(t(label))}</a>`);
+  const hasPrivateAccess = !project.links.live || !project.links.repo;
+  const privateNotice = hasPrivateAccess ? copy(project.links.live ? 'projects.privateSource' : 'projects.private', 'p', 'class="project-private"') : '';
+  if (hasPrivateAccess) {
+    const subject = encodeURIComponent(t('projects.contactSubject', { title: project.title }));
+    actions.push(`<a class="button secondary" href="mailto:akhmadfauzy40@gmail.com?subject=${subject}">${escape(t('projects.contact'))}</a>`);
+  }
   $('#project-number').textContent = `${t('projects.label')} / ${project.number}`;
   $('#project-position').textContent = `${activeProject + 1} / ${PROJECTS.length}`;
-  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}<ul class="tech-list">${tech(project.tech)}</ul>${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div><div class="modal-actions">${[['live', 'projects.live'], ['repo', 'projects.repo']].map(([key, label]) => project.links[key] ? `<a class="button ${key === 'live' ? 'primary' : 'secondary'}" href="${escape(project.links[key])}" target="_blank" rel="noopener noreferrer">${escape(t(label))}</a>` : `<span class="coming-soon">${escape(t(label))} · ${escape(t('projects.soon'))}</span>`).join('')}</div>`;
+  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}<ul class="tech-list">${tech(project.tech)}</ul>${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div>${privateNotice}<div class="modal-actions">${actions.join('')}</div>`;
   loadGallery(project);
 }
 function openProject(index, trigger, updateHistory = true) {

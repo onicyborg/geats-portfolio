@@ -42,7 +42,7 @@ assets/projects/easykan/03.webp
 
 Gambar muncul otomatis setelah file tersedia; tidak perlu mengubah JavaScript. Screenshot memakai lazy loading, rasio tetap, crop `object-fit: cover`, dan lightbox. File kosong/tidak valid tetap menjadi placeholder. Gambar transparan 1 × 1 px hanya penanda teknis untuk file yang belum tersedia, bukan screenshot contoh.
 
-Isi `links.live` dan `links.repo` dalam `projects-data.js` dengan URL yang sudah dikonfirmasi. Nilai kosong menampilkan teks “Coming soon” / “Segera hadir”, bukan tombol mati. Untuk peran proyek, tambahkan key EN/ID ke `i18n.js`, lalu isi `role` dengan key tersebut. Nama produk dan nama teknologi tetap memakai nama resminya di kedua bahasa.
+Isi `links.live` dan `links.repo` dalam `projects-data.js` dengan URL publik yang sudah dikonfirmasi. Nilai kosong menandakan akses privat: modal menampilkan keterangan serta tautan email untuk membahas detail proyek, dengan judul proyek dalam subjek. Tautan publik yang sudah tersedia tetap ditampilkan. Peran Papanclip dan Finance Workspace API adalah Backend Developer; EasyKan, K2-Net, dan Antre-In adalah Fullstack Developer. Semua peran dan keterangan akses tersedia dalam EN/ID.
 
 Deep link contoh: `/#project=finance-workspace-api`. Modal mendukung Tab/Shift+Tab, Escape, backdrop, tombol sebelumnya/berikutnya, browser Back/Forward, dan pengembalian fokus ke kartu pemicu.
 
@@ -65,15 +65,14 @@ Portfolio untuk calon rekan kerja, recruiter, dan klien, dengan bahasa visual ed
 
 ## TODO pemilik
 
-- [ ] Isi link repo ketiga proyek; isi link live Finance Workspace API dan EasyKan jika tersedia. Live Papanclip sudah dipertahankan.
-- [ ] Tambahkan sembilan screenshot sesuai pola folder di atas.
-- [ ] Konfirmasi peran pada setiap entri proyek sebelum mengisi `role`.
+- [ ] Perbarui screenshot apabila tampilan proyek berubah; 15 screenshot untuk lima proyek sudah tersedia.
 - [ ] Konfirmasi dugaan deskripsi/fitur/stack **Papanclip dan EasyKan tertukar**. Teks asli belum ditukar atau dikoreksi.
 - [ ] Konfirmasi perbedaan title tab **System Analyst & Backend Engineer** dengan hero **Backend Developer & QA Analyst**. Makna keduanya tetap dipertahankan.
-- [ ] Isi domain produksi untuk canonical, `og:url`, dan URL gambar sosial absolut. Tidak ada domain portfolio yang diasumsikan.
 
 `QA.md` dan `docs/qa/` menyimpan hasil verifikasi lokal dan diabaikan Git, bersama `.agents/`, cache, serta konfigurasi pribadi. File aplikasi, screenshot proyek, dan konfigurasi hosting tetap disimpan di repository.
 
 ## Deployment
 
 Repository terhubung ke Vercel. Push ke `main` memicu deployment produksi. Situs memakai preset Other, tanpa build command, dengan root repository sebagai output; tidak perlu menjalankan server lokal untuk pengunjung. Semua file dalam `assets/` harus ikut dipublikasikan bersama `index.html`, foto, favicon, dan PDF. `vercel.json` sudah menyertakan aturan fallback screenshot dan unduhan CV.
+
+Domain produksi: https://geats-portfolio.vercel.app/. Canonical, `og:url`, serta URL gambar Open Graph/Twitter memakai domain ini.
