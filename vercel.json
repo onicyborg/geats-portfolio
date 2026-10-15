@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/CV-Akhmad(?:%20| )Fauzi\\.pdf", "headers": { "Content-Disposition": "attachment; filename=\"CV-Akhmad-Fauzi.pdf\"" }, "continue": true },
+    { "handle": "filesystem" },
+    { "src": "/assets/projects/[^/]+/[^/]+\\.(webp|png|jpg|jpeg)", "dest": "/assets/projects/empty.svg" }
+  ]
+}

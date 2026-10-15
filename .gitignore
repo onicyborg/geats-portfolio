@@ -1,0 +1,28 @@
+# Local agent tools
+.agents/
+.codex/
+
+# Local dependencies and hosting state
+node_modules/
+.vercel/
+.cache/
+
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# Generated verification artifacts
+/QA.md
+/docs/qa/
+/test-results/
+/playwright-report/
+*.log
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
