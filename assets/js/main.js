@@ -9,16 +9,16 @@ const tech = items => items.map(item => `<li>${escape(item)}</li>`).join('');
 const arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
 
 const skills = [
-  ['skills.core', ['PHP', 'Laravel', 'TypeScript', 'Nest.js', 'Prisma ORM'], ['tag.backend', 'tag.eloquent', 'tag.types']],
-  ['skills.system', ['Linux Ubuntu', 'Kali Linux', 'Bash'], ['tag.environment', 'tag.dual', 'tag.bash']],
-  ['skills.database', ['DBeaver', 'Bruno', 'Burp Suite', 'PostgreSQL', 'MySQL'], ['tag.relational', 'tag.apiTest', 'tag.penTest']],
-  ['skills.workflow', ['GitHub CLI', 'Windsurf', 'Vercel', 'Swagger'], ['tag.version', 'tag.ai']],
+  ['skills.core', ['NestJS', 'Laravel (PHP)', 'Express', 'Go (Gin)', 'Node.js', 'REST API', 'WebSocket', 'Redis'], ['tag.backend', 'tag.types']],
+  ['skills.system', ['Next.js', 'React.js', 'TypeScript', 'JavaScript', 'Flutter', 'Dart'], ['tag.responsive', 'tag.cross']],
+  ['skills.database', ['PostgreSQL', 'MySQL', 'SQL Server', 'Firebase', 'SQLite', 'Swagger/OpenAPI', 'Postman', 'Bruno'], ['tag.relational', 'tag.apiTest']],
+  ['skills.workflow', ['JWT', 'RBAC', 'OAuth2', 'Burp Suite', 'Automation Testing', 'Regression Testing', 'API Testing'], ['tag.penTest', 'tag.bugLog']],
 ];
 $('#skills-table').innerHTML = skills.map(([title, tools, labels]) => `<article class="skill-row reveal">${copy(title, 'h3')}<div><p class="tools">${tools.map(escape).join(' <span aria-hidden="true">/</span> ')}</p><ul class="skill-tags">${tags(labels)}</ul></div></article>`).join('');
 $('#skills-notes').innerHTML = [
-  ['skills.special', 'skills.card5desc', [], ['tag.analysis', 'tag.qa', 'tag.prompt', 'tag.testCase', 'tag.bugLog']],
-  ['skills.mobileTitle', 'skills.mobileDesc', ['Flutter', 'Dart'], ['tag.cross', 'tag.responsive', 'tag.codebase']],
-].map(([title, description, tools, labels]) => `<article class="skill-note reveal"><span class="note-mark" aria-hidden="true">+</span>${copy(title, 'h3')}${copy(description, 'p')}${tools.length ? `<p class="tools">${tools.join(' <span aria-hidden="true">/</span> ')}</p>` : ''}<ul class="skill-tags">${tags(labels)}</ul></article>`).join('');
+  ['skills.special', 'skills.card5desc', ['Docker', 'GitHub Actions (CI/CD)', 'Nginx', 'Apache', 'Linux Server Admin'], []],
+  ['skills.mobileTitle', 'skills.mobileDesc', ['Git', 'DBeaver', 'Windsurf', 'Kiro CLI', 'Agile/Scrum', 'Code Review', 'System Design', 'Technical Documentation'], []],
+].map(([title, description, tools, labels]) => `<article class="skill-note reveal"><span class="note-mark" aria-hidden="true">+</span>${copy(title, 'h3')}${copy(description, 'p')}${tools.length ? `<p class="tools">${tools.map(escape).join(' <span aria-hidden="true">/</span> ')}</p>` : ''}${labels.length ? `<ul class="skill-tags">${tags(labels)}</ul>` : ''}</article>`).join('');
 $('#services-list').innerHTML = [
   ['Laravel', 'PHP', 'Nest.js', 'Next.js', 'MySQL', 'PostgreSQL', 'REST API'],
   ['Nest.js', 'Laravel', 'Go', 'MySQL', 'PostgreSQL', 'REST API'],

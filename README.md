@@ -22,7 +22,7 @@ Deploy di Vercel sebagai situs statis, tanpa build command, dengan root reposito
 - `assets/js/scene.js`: kartu ID three.js, spring pendulum, drag, flip, resource disposal.
 - `assets/projects/<slug>/`: tiga slot screenshot tiap proyek.
 
-`ace.jpeg`, `geats.png`, `CV-Akhmad Fauzi.pdf`, serta `pdf-version.html` dipertahankan. Versi index sebelumnya tersedia di riwayat Git; tidak ada halaman legacy yang ikut dipublikasikan.
+`ace.jpeg`, `geats.png`, `CV-Akhmad Fauzi.pdf`, serta `pdf-version.html` tersedia di repository. CV diperbarui menjadi dua halaman dengan tiga peran utama, pengalaman magang KAI, dan lima proyek pilihan. Salinan PDF sebelum revisi disimpan lokal sebagai `CV-Akhmad Fauzi.before-revision.pdf` dan diabaikan Git. Versi index sebelumnya tersedia di riwayat Git; tidak ada halaman legacy yang ikut dipublikasikan.
 
 ## Isi proyek
 
@@ -66,8 +66,8 @@ Portfolio untuk calon rekan kerja, recruiter, dan klien, dengan bahasa visual ed
 ## TODO pemilik
 
 - [ ] Perbarui screenshot apabila tampilan proyek berubah; 15 screenshot untuk lima proyek sudah tersedia.
-- [ ] Konfirmasi dugaan deskripsi/fitur/stack **Papanclip dan EasyKan tertukar**. Teks asli belum ditukar atau dikoreksi.
-- [ ] Konfirmasi perbedaan title tab **System Analyst & Backend Engineer** dengan hero **Backend Developer & QA Analyst**. Makna keduanya tetap dipertahankan.
+- [ ] Tinjau ulang klaim fitur proyek, terutama Papanclip, sebelum mengirim CV ke lowongan tertentu.
+- [ ] Sesuaikan ringkasan CV dengan kata kunci lowongan yang dituju; tata letak yang mudah dibaca ATS tidak menjamin lolos seleksi.
 
 `QA.md` dan `docs/qa/` menyimpan hasil verifikasi lokal dan diabaikan Git, bersama `.agents/`, cache, serta konfigurasi pribadi. File aplikasi, screenshot proyek, dan konfigurasi hosting tetap disimpan di repository.
 

@@ -1,4 +1,3 @@
-// Keep descriptions as supplied. TODO: confirm whether Papanclip / EasyKan copy is swapped.
 export const PROJECTS = [
   {
     slug: 'papanclip', title: 'Papanclip', number: '001',

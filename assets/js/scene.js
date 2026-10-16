@@ -47,11 +47,12 @@ function drawFace(canvas, photo, back) {
     text('@onicyborg', 72, 845, 42, '#A1A9B5', true);
     text('Akhmad Fauzi', 72, 947, 86, '#ECEEF1', false, 600);
     text(t('card.alias'), 72, 1006, 44, '#A1A9B5');
-    text(t('role.backend'), 72, 1100, 51);
-    text(t('role.qa'), 72, 1163, 51);
-    text(t('card.location'), 72, 1230, 44, '#A1A9B5');
-    ctx.fillStyle = '#3DD68C'; ctx.beginPath(); ctx.arc(83, 1300, 10, 0, Math.PI * 2); ctx.fill();
-    text(t('nav.status'), 110, 1314, 44);
+    text(t('role.backend'), 72, 1080, 45);
+    text(t('role.fullstack'), 72, 1136, 45);
+    text(t('role.qa'), 72, 1192, 45);
+    text(t('card.location'), 72, 1260, 42, '#A1A9B5');
+    ctx.fillStyle = '#3DD68C'; ctx.beginPath(); ctx.arc(83, 1320, 10, 0, Math.PI * 2); ctx.fill();
+    text(t('nav.status'), 110, 1334, 42);
     const foil = ctx.createLinearGradient(72, 0, w - 72, 0);
     foil.addColorStop(0, '#7b828b'); foil.addColorStop(.4, '#d0c8b4'); foil.addColorStop(.65, '#b98b42'); foil.addColorStop(1, '#7b828b');
     ctx.fillStyle = foil; ctx.fillRect(72, 1380, w - 144, 18);
