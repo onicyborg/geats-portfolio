@@ -32,7 +32,7 @@ export const PROJECTS = [
     role: 'role.fullstack',
   },
   {
-    slug: 'Antre-In', title: 'Antre-In', number: '5',
+    slug: 'Antre-In', title: 'Antre-In', number: '005',
     summary: 'proj5.desc', features: ['proj5.f1', 'proj5.f2', 'proj5.f3', 'proj5.f4'],
     tech: ['PHP 8.2', 'Laravel 12', 'MySQL/MariaDB', 'Blade Templates', 'jQuery', 'Bootstrap 4', 'Otika Admin Template'],
     links: { live: 'https://antre-in.skripsian.site/', repo: 'https://github.com/onicyborg/antre-in.git' }, // TODO: add verified live and repository URLs.
