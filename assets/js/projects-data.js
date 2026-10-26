@@ -1,11 +1,22 @@
 export const PROJECTS = [
   {
     slug: 'papanclip', title: 'Papanclip', number: '001',
-    summary: 'proj2.desc', features: ['proj2.f1', 'proj2.f2', 'proj2.f3', 'proj2.f4'],
-    tech: ['NestJS', 'TypeScript', 'PostgreSQL', 'WebSocket'],
+    summary: 'proj2.desc', problem: 'proj2.problem', contribution: 'proj2.contribution',
+    features: ['proj2.f1', 'proj2.f2', 'proj2.f3', 'proj2.f4', 'proj2.f5', 'proj2.f6', 'proj2.f7', 'proj2.f8', 'proj2.f9', 'proj2.f10'],
+    tech: ['Next.js', 'NestJS', 'PostgreSQL', 'FastAPI', 'Socket.IO'],
+    techGroups: [
+      { label: 'proj2.techFrontend', items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'] },
+      { label: 'proj2.techData', items: ['TanStack Query', 'TanStack Table', 'React Hook Form', 'Zod', 'Axios'] },
+      { label: 'proj2.techBackend', items: ['NestJS', 'TypeScript', 'Prisma', 'PostgreSQL'] },
+      { label: 'proj2.techRealtime', items: ['Socket.IO'] },
+      { label: 'proj2.techAi', items: ['Python', 'FastAPI', 'SQLAlchemy', 'Alembic', 'LLM gateway'] },
+      { label: 'proj2.techDocs', items: ['PyMuPDF', 'RapidOCR', 'python-docx', 'openpyxl'] },
+      { label: 'proj2.techStorage', items: ['Cloudflare R2', 'Midtrans'] },
+      { label: 'proj2.techQuality', items: ['Docker', 'GitHub Actions', 'Jest', 'Pytest', 'Ruff'] },
+    ],
     links: { live: 'https://papanclip.hompimpa.biz.id/', repo: '' }, // Source code is private.
     screenshots: ['assets/projects/papanclip/01.webp', 'assets/projects/papanclip/02.webp', 'assets/projects/papanclip/03.webp'],
-    role: 'role.backend',
+    role: 'role.fullstack',
   },
   {
     slug: 'finance-workspace-api', title: 'Finance Workspace API', number: '002',

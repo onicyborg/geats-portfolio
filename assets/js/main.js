@@ -26,7 +26,7 @@ $('#services-list').innerHTML = [
   ['tag.bugFix', 'tag.integration', 'tag.architecture'],
 ].map((tools, i) => `<article class="service-row reveal"><span class="mono service-number" aria-hidden="true">${['A', 'B', 'C', 'D'][i]}</span>${copy(`svc${i + 1}.title`, 'h3')}<div>${copy(`svc${i + 1}.desc`, 'p')}<ul class="tech-list">${tools.map(tool => tool.startsWith('tag.') ? copy(tool, 'li') : `<li>${tool}</li>`).join('')}</ul></div></article>`).join('');
 $('#timeline').innerHTML = [
-  ['Papanclip', 'role.backend', 'exp.current', 'exp.team'],
+  ['Papanclip', 'role.fullstack', 'exp.current', 'exp.team'],
   ['Altimeda Cipta Visitama', 'role.quality', 'exp.current'],
   ['exp.freelance', 'role.independent', 'exp.current'],
   ['Ismart Inter Global', 'role.quality', 'exp.past'],
@@ -103,7 +103,10 @@ function renderProject() {
   const context = project.problem || project.contribution
     ? `<div class="project-context">${project.problem ? `<div>${copy('projects.problem', 'h3')}${copy(project.problem, 'p')}</div>` : ''}${project.contribution ? `<div>${copy('projects.contribution', 'h3')}${copy(project.contribution, 'p')}</div>` : ''}</div>`
     : '';
-  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}${context}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}<ul class="tech-list">${tech(project.tech)}</ul>${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div>${privateNotice}<div class="modal-actions">${actions.join('')}</div>`;
+  const stack = project.techGroups
+    ? `<div class="tech-groups">${project.techGroups.map(group => `<section class="tech-group">${copy(group.label, 'h4')}<p>${escape(group.items.join(', '))}</p></section>`).join('')}</div>`
+    : `<ul class="tech-list">${tech(project.tech)}</ul>`;
+  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}${context}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}${stack}${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div>${privateNotice}<div class="modal-actions">${actions.join('')}</div>`;
   loadGallery(project);
 }
 function openProject(index, trigger, updateHistory = true) {

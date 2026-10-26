@@ -180,6 +180,9 @@ dialog.closing { animation: dialog-out .15s ease-in forwards; }
 .features-list li { padding: 10px 0 10px 20px; position: relative; border-bottom: 1px solid var(--line); font-size: 14px; }
 .features-list li::before { content: ''; width: 4px; height: 4px; background: var(--accent); position: absolute; left: 0; top: 21px; }
 .modal-details .tech-list { margin-top: 0; }
+.tech-groups { display: grid; gap: 16px; }
+.tech-group h4 { color: var(--text-muted); font: 11px var(--mono); margin-bottom: 5px; }
+.tech-group p { font-size: 13px; line-height: 1.6; }
 .project-role { margin-top: 24px; }
 .gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
 .screenshot-slot { position: relative; aspect-ratio: 16/10; border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; }

@@ -22,7 +22,7 @@ Deploy di Vercel sebagai situs statis, tanpa build command, dengan root reposito
 - `assets/js/scene.js`: kartu ID three.js, spring pendulum, drag, flip, resource disposal.
 - `assets/projects/<slug>/`: tiga slot screenshot tiap proyek.
 
-`ace.jpeg`, `geats.png`, `CV-Akhmad Fauzi.pdf`, serta `pdf-version.html` tersedia di repository. CV diperbarui menjadi dua halaman dengan tiga peran utama dan pengalaman magang KAI. Portfolio kini menampilkan enam proyek; Namikulo Course belum ditambahkan ke CV. Salinan PDF sebelum revisi disimpan lokal sebagai `CV-Akhmad Fauzi.before-revision.pdf` dan diabaikan Git. Versi index sebelumnya tersedia di riwayat Git; tidak ada halaman legacy yang ikut dipublikasikan.
+`ace.jpeg`, `geats.png`, `CV-Akhmad Fauzi.pdf`, serta `pdf-version.html` tersedia di repository. CV dua halaman kini mencantumkan Papanclip sebagai pekerjaan full-stack, termasuk kontribusi Next.js, NestJS, PostgreSQL, dan layanan AI FastAPI, serta tetap memuat pengalaman magang KAI. Portfolio menampilkan enam proyek; Namikulo Course belum ditambahkan ke CV. Salinan PDF sebelum revisi Papanclip disimpan lokal sebagai `CV-Akhmad Fauzi.pre-papanclip.pdf` dan diabaikan Git. Versi index sebelumnya tersedia di riwayat Git; tidak ada halaman legacy yang ikut dipublikasikan.
 
 ## Isi proyek
 
@@ -51,7 +51,7 @@ assets/projects/namikulo-course/03.webp
 
 Gambar muncul otomatis setelah file tersedia; tidak perlu mengubah JavaScript. Screenshot memakai lazy loading, rasio tetap, crop `object-fit: cover`, dan lightbox. File kosong/tidak valid tetap menjadi placeholder. Gambar transparan 1 × 1 px hanya penanda teknis untuk file yang belum tersedia, bukan screenshot contoh. Tiga screenshot Namikulo Course dikonversi dari PNG ke WebP tanpa memotong isi; PNG asli tetap tersimpan lokal dan diabaikan Git.
 
-Isi `links.live` dan `links.repo` dalam `projects-data.js` dengan URL publik yang sudah dikonfirmasi. Nilai kosong menandakan akses privat: modal menampilkan keterangan serta tautan email untuk membahas detail proyek, dengan judul proyek dalam subjek. Tautan publik yang sudah tersedia tetap ditampilkan. Peran Papanclip dan Finance Workspace API adalah Backend Developer; EasyKan, K2-Net, dan Antre-In adalah Full-Stack Developer; Namikulo Course adalah Full-Stack Developer & QA. `previewTech` membatasi daftar teknologi pada kartu tanpa mengurangi daftar `tech` lengkap dalam modal. `problem` dan `contribution` menambahkan konteks proyek secara opsional. Semua peran dan keterangan akses tersedia dalam EN/ID.
+Isi `links.live` dan `links.repo` dalam `projects-data.js` dengan URL publik yang sudah dikonfirmasi. Nilai kosong menandakan akses privat: modal menampilkan keterangan serta tautan email untuk membahas detail proyek, dengan judul proyek dalam subjek. Tautan publik yang sudah tersedia tetap ditampilkan. Peran Papanclip adalah Full-Stack Developer, Finance Workspace API adalah Backend Developer, EasyKan, K2-Net, dan Antre-In adalah Full-Stack Developer, serta Namikulo Course adalah Full-Stack Developer & QA. Papanclip memakai `tech` untuk daftar singkat di kartu dan `techGroups` untuk stack lengkap di modal; proyek lain dapat memakai `previewTech` untuk kartu. `problem` dan `contribution` menambahkan konteks proyek secara opsional. Semua peran dan keterangan akses tersedia dalam EN/ID.
 
 Deep link contoh: `/#project=finance-workspace-api`. Modal mendukung Tab/Shift+Tab, Escape, backdrop, tombol sebelumnya/berikutnya, browser Back/Forward, dan pengembalian fokus ke kartu pemicu.
 
@@ -76,7 +76,7 @@ Portfolio untuk calon rekan kerja, recruiter, dan klien, dengan bahasa visual ed
 
 - [ ] Perbarui screenshot apabila tampilan proyek berubah; 18 screenshot untuk enam proyek sudah tersedia.
 - [ ] Tentukan apakah Namikulo Course perlu ditambahkan ke CV pada revisi berikutnya.
-- [ ] Tinjau ulang klaim fitur proyek, terutama Papanclip, sebelum mengirim CV ke lowongan tertentu.
+- [ ] Perbarui narasi Papanclip jika evaluasi kualitas bahasa AI menghasilkan perubahan; jangan mengklaim akurasi atau stabilitas penuh tanpa bukti.
 - [ ] Sesuaikan ringkasan CV dengan kata kunci lowongan yang dituju; tata letak yang mudah dibaca ATS tidak menjamin lolos seleksi.
 
 `QA.md` dan `docs/qa/` menyimpan hasil verifikasi lokal dan diabaikan Git, bersama `.agents/`, cache, serta konfigurasi pribadi. File aplikasi, screenshot proyek, dan konfigurasi hosting tetap disimpan di repository.
