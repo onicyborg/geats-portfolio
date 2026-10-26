@@ -172,6 +172,9 @@ dialog.closing { animation: dialog-out .15s ease-in forwards; }
 #project-content { padding: 32px; }
 #project-title { font-size: clamp(32px,4vw,52px); outline-offset: 8px; }
 .modal-summary { max-width: 65ch; margin-top: 20px; }
+.project-context { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; margin-top: 32px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.project-context h3 { font: 12px var(--mono); color: var(--text-muted); margin-bottom: 12px; }
+.project-context p { font-size: 14px; line-height: 1.7; }
 .modal-details { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; margin: 36px 0; }
 .modal-details h3, .gallery-heading { font: 12px var(--mono); color: var(--text-muted); letter-spacing: 0; margin-bottom: 20px; }
 .features-list li { padding: 10px 0 10px 20px; position: relative; border-bottom: 1px solid var(--line); font-size: 14px; }
@@ -295,6 +298,7 @@ dialog.closing { animation: dialog-out .15s ease-in forwards; }
   .project-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); }
   .dialog-toolbar { padding-inline: 20px; }
   #project-content { padding: 24px 20px; }
+  .project-context { grid-template-columns: 1fr; gap: 24px; }
   .modal-details { grid-template-columns: 1fr; gap: 28px; }
   .gallery { grid-template-columns: 1fr; }
   .slot-placeholder .mono, .slot-placeholder small { font-size: 12px; }

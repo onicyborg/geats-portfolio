@@ -39,4 +39,15 @@ export const PROJECTS = [
     screenshots: ['assets/projects/antre-in/01.webp', 'assets/projects/antre-in/02.webp', 'assets/projects/antre-in/03.webp'],
     role: 'role.fullstack',
   },
+  {
+    slug: 'namikulo-course', title: 'Namikulo Course', number: '006',
+    summary: 'proj6.desc', problem: 'proj6.problem', contribution: 'proj6.contribution',
+    features: ['proj6.f1', 'proj6.f2', 'proj6.f3', 'proj6.f4'],
+    tech: ['PHP', 'Laravel 12', 'Blade', 'Custom CSS', 'JavaScript', 'Bootstrap 4', 'PostgreSQL/MySQL', 'Midtrans Core API', 'Cloudflare R2', 'ffmpeg.wasm', 'hls.js', 'Lexical', 'Yajra DataTables', 'Dompdf'],
+    previewTech: ['Laravel 12', 'Blade', 'Midtrans', 'Cloudflare R2', 'hls.js'],
+    links: { live: 'https://course.namikulo.com/', repo: 'https://github.com/onicyborg/namikulo-course' },
+    screenshots: ['assets/projects/namikulo-course/01.webp', 'assets/projects/namikulo-course/02.webp', 'assets/projects/namikulo-course/03.webp'],
+    screenshotAlts: ['proj6.s1', 'proj6.s2', 'proj6.s3'],
+    role: 'role.fullstackQa',
+  },
 ];

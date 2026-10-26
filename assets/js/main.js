@@ -34,7 +34,7 @@ $('#timeline').innerHTML = [
   ['KAI DAOP 5 Purwokerto', 'role.intern', 'exp.internship'],
 ].map(([company, role, state, team], i) => `<article class="experience-item reveal"><div class="experience-meta">${copy(`exp${i + 1}.period`)}${copy(state, 'span', `class="state ${state === 'exp.current' ? 'current' : ''}"`)}</div>${company.startsWith('exp.') ? copy(company, 'h3') : `<h3>${company}</h3>`}${copy(role, 'p', 'class="experience-role"')}${team ? copy(team, 'p', 'class="team"') : ''}${copy(`exp${i + 1}.desc`, 'p', 'class="experience-description"')}</article>`).join('');
 
-$('#projects-list').innerHTML = PROJECTS.map(project => `<button type="button" class="project-card" data-project="${project.slug}" aria-haspopup="dialog"><span class="project-heading"><span class="project-kicker">${copy('projects.label')} / ${project.number}</span><span class="project-name" id="name-${project.slug}">${escape(project.title)}</span></span><span><span class="project-summary" data-i18n="${project.summary}">${escape(t(project.summary))}</span><span class="project-tech">${project.tech.map(tool => `<span>${escape(tool)}</span>`).join('')}</span></span><span class="project-open">${copy('projects.open')}${arrow}</span></button>`).join('');
+$('#projects-list').innerHTML = PROJECTS.map(project => `<button type="button" class="project-card" data-project="${project.slug}" aria-haspopup="dialog"><span class="project-heading"><span class="project-kicker">${copy('projects.label')} / ${project.number}</span><span class="project-name" id="name-${project.slug}">${escape(project.title)}</span></span><span><span class="project-summary" data-i18n="${project.summary}">${escape(t(project.summary))}</span><span class="project-tech">${(project.previewTech ?? project.tech).map(tool => `<span>${escape(tool)}</span>`).join('')}</span></span><span class="project-open">${copy('projects.open')}${arrow}</span></button>`).join('');
 
 const menu = $('.menu-toggle');
 const navigation = $('#navigation');
@@ -57,7 +57,7 @@ let imageTrigger;
 let returnHash = '#projects';
 
 function lockScroll() { document.body.classList.toggle('scroll-locked', dialog.open || lightbox.open); }
-function screenshotLabel(project, i) { return t('projects.screenshot', { title: project.title, number: String(i + 1).padStart(2, '0') }); }
+function screenshotLabel(project, i) { return project.screenshotAlts ? t(project.screenshotAlts[i]) : t('projects.screenshot', { title: project.title, number: String(i + 1).padStart(2, '0') }); }
 function loadGallery(project) {
   const version = ++galleryVersion;
   document.querySelectorAll('.screenshot-slot').forEach((slot, i) => {
@@ -100,7 +100,10 @@ function renderProject() {
   }
   $('#project-number').textContent = `${t('projects.label')} / ${project.number}`;
   $('#project-position').textContent = `${activeProject + 1} / ${PROJECTS.length}`;
-  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}<ul class="tech-list">${tech(project.tech)}</ul>${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div>${privateNotice}<div class="modal-actions">${actions.join('')}</div>`;
+  const context = project.problem || project.contribution
+    ? `<div class="project-context">${project.problem ? `<div>${copy('projects.problem', 'h3')}${copy(project.problem, 'p')}</div>` : ''}${project.contribution ? `<div>${copy('projects.contribution', 'h3')}${copy(project.contribution, 'p')}</div>` : ''}</div>`
+    : '';
+  $('#project-content').innerHTML = `<h2 id="project-title" tabindex="-1">${escape(project.title)}</h2>${copy(project.summary, 'p', 'class="modal-summary"')}${context}<div class="modal-details"><div>${copy('projects.features', 'h3')}<ul class="features-list">${tags(project.features)}</ul></div><div>${copy('projects.stack', 'h3')}<ul class="tech-list">${tech(project.tech)}</ul>${project.role ? `<div class="project-role">${copy('projects.role', 'h3')}${copy(project.role, 'p')}</div>` : ''}</div></div>${copy('projects.gallery', 'h3', 'class="gallery-heading"')}<div class="gallery">${project.screenshots.map((path, i) => `<div class="screenshot-slot"><div class="slot-placeholder"><span class="mono">${escape(t('projects.slot', { number: String(i + 1).padStart(2, '0') }))}</span><small>${escape(t('projects.loading'))}</small></div></div>`).join('')}</div>${privateNotice}<div class="modal-actions">${actions.join('')}</div>`;
   loadGallery(project);
 }
 function openProject(index, trigger, updateHistory = true) {
